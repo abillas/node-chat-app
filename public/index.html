@@ -9,6 +9,19 @@
   <body>
     <p>
       Welcome to the Chat App!
+
+      <script src="/socket.io/socket.io.js"></script>
+      <script>
+        var socket = io();
+
+        socket.on("connect", () => {
+          console.log("Connected to server");
+        });
+
+        socket.on("disconnect", () => {
+          console.log("Discconected");
+        });
+      </script>
     </p>
   </body>
 </html>
